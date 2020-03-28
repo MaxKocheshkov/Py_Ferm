@@ -48,11 +48,11 @@ class Sheep(Ungulates):
 ###
 class Goat(Ungulates):
   def goat_receipt(self):
-    print(self.name + " дает шерсть")
+    print(self.name + " дает молоко")
 
   def goat_voice(self):
     print(f'{self.name} говорит "Мееее"')
-    
+
 ### Task 2
 goose_1 = Goose('гусь Серый', 2)
 goose_1.goose_voice()
@@ -104,3 +104,14 @@ goat_2.goat_voice()
 goat_2.Ungulates_feeding()
 goat_2.goat_receipt()
 print('######')
+
+
+### Task 3
+Ferm_weight = {'гусь Серый': 2, 'гусь Белый' : 1.6, 'курица Ко-Ко' : 3.4, 'курица Кукареку' : 2.5, 'утка Кряква' : 1.2, 'корова Манька' : 500, 'овца Барашек': 100, 'овца Кудрявый' : 150, 'коза Рога' : 125 , 'коза Копыта' : 140}
+arg_weight = sum(Ferm_weight.values())/len(Ferm_weight.values())
+print(f'Средний вес всех животных на ферме - {round(arg_weight)}')
+print('######')
+max_weight = max(Ferm_weight.values())
+for anim_name, anim_weight in Ferm_weight.items():
+  if anim_weight == max_weight:
+    print(f'Самый большой вес у {anim_name} - {anim_weight} кг')
